@@ -1,0 +1,354 @@
+:root {
+  --color-bg: #faf8f4;
+  --color-text: #232323;
+  --color-muted: #5c5c5c;
+  --color-accent: #1b2a4a;
+  --color-rule: #d8d2c4;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --content-width: 760px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.3rem;
+  border-bottom: 1px solid var(--color-rule);
+  padding-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.05rem;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* Header */
+
+.site-header {
+  padding: 56px 0 28px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.header-identity {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.headshot {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid var(--color-rule);
+}
+
+.header-identity h1 {
+  margin-bottom: 2px;
+}
+
+.site-header .title {
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  margin: 0 0 4px;
+}
+
+.site-header .location {
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  margin: 0 0 20px;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.92rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover {
+  border-bottom-color: var(--color-accent);
+}
+
+.site-nav .nav-resume {
+  margin-left: auto;
+  font-weight: 600;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  padding: 4px 12px;
+  border-radius: 2px;
+}
+
+.site-nav .nav-resume:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+/* Main sections */
+
+main {
+  padding-top: 48px;
+}
+
+section {
+  margin-bottom: 52px;
+  scroll-margin-top: 24px;
+}
+
+section p {
+  margin: 0 0 14px;
+}
+
+section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+section li {
+  margin-bottom: 8px;
+}
+
+.muted {
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+/* Experience */
+
+.role {
+  margin-bottom: 32px;
+}
+
+.role:last-child {
+  margin-bottom: 0;
+}
+
+.role-head {
+  margin-bottom: 10px;
+}
+
+.role-meta {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.role-compact ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Education */
+
+.education-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.education-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-bottom: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.education-list li:last-child {
+  border-bottom: none;
+}
+
+.education-list .school {
+  font-weight: 600;
+  width: 100%;
+}
+
+.education-list .degree {
+  color: var(--color-text);
+}
+
+.education-list .years {
+  color: var(--color-muted);
+}
+
+.education-list .years::before {
+  content: "· ";
+}
+
+.education-list .note {
+  color: var(--color-muted);
+}
+
+.education-list .note::before {
+  content: "· ";
+}
+
+/* Skills */
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+}
+
+.skills-list li {
+  padding-left: 16px;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+/* Recognition */
+
+#talks ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#talks li {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-rule);
+}
+
+#talks li:last-child {
+  border-bottom: none;
+}
+
+.talk-title {
+  display: block;
+  font-weight: 600;
+}
+
+.talk-meta {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin-top: 2px;
+}
+
+.subhead {
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+.subhead:first-of-type {
+  margin-top: 0;
+}
+
+.muted-note {
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  margin: 0 0 8px;
+}
+
+.cv-link {
+  margin-top: 18px;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+/* Contact */
+
+#contact p {
+  font-size: 1.05rem;
+}
+
+.divider {
+  margin: 0 10px;
+  color: var(--color-rule);
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--color-rule);
+  padding: 28px 0 56px;
+  margin-top: 20px;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* Responsive */
+
+@media (max-width: 560px) {
+  body {
+    font-size: 16px;
+  }
+
+  .site-header {
+    padding-top: 40px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+}
